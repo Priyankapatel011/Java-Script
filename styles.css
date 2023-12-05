@@ -1,0 +1,19 @@
+
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+
+.div {
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+    color: white;
+}

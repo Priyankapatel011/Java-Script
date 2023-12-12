@@ -828,56 +828,305 @@ document.body.style.backgroundColor = "pink";
 
 /////////////////////////////////////////
 
-let modeBtn = document.querySelector("#mode");
-let currMode = "lightmode"
+// let modeBtn = document.querySelector("#mode");
+// let currMode = "lightmode"
 
-let body = document.querySelector("body");
+// let body = document.querySelector("body");
 
-modeBtn.addEventListener(("click"), () => {
-    // console.log("You are trying to change the mode");
-    // if(currMode === "lightmode"){
-    //     currMode = "darkmode";
-    //     body.style.backgroundColor = "black"
-    //     modeBtn.style.backgroundColor = "grey";
-    //     modeBtn.style.color = "white";
-    // }
-    // else{
-    //     currMode = "lightmode";
-    //     body.style.backgroundColor = "white";
-    //     modeBtn.style.color = "black";
-    // }
+// modeBtn.addEventListener(("click"), () => {
+//     // console.log("You are trying to change the mode");
+//     // if(currMode === "lightmode"){
+//     //     currMode = "darkmode";
+//     //     body.style.backgroundColor = "black"
+//     //     modeBtn.style.backgroundColor = "grey";
+//     //     modeBtn.style.color = "white";
+//     // }
+//     // else{
+//     //     currMode = "lightmode";
+//     //     body.style.backgroundColor = "white";
+//     //     modeBtn.style.color = "black";
+//     // }
 
 
-    if(currMode === "lightmode"){
-        currMode = "darkmode";
-        body.classList.add("dark");
-    }
-    else{
-        currMode = "lightmode";
-        body.classList.add("light");
-    }
+//     if(currMode === "lightmode"){
+//         currMode = "darkmode";
+//         body.classList.add("dark");
+//     }
+//     else{
+//         currMode = "lightmode";
+//         body.classList.add("light");
+//     }
 
-    console.log(currMode);
+//     console.log(currMode);
 
 
     
-})
+// })
 
-const div = document.querySelector("div");
-div.addEventListener(("mouseover"), () => {
-    div.style.backgroundColor = "orange";
-    div.style.width = "500px";
-})
+// const div = document.querySelector("div");
+// div.addEventListener(("mouseover"), () => {
+//     div.style.backgroundColor = "orange";
+//     div.style.width = "500px";
+// })
 
-div.addEventListener(("mouseout"), () => {
-    div.style.backgroundColor = "blue";
-    div.style.width = "100px";
-})
-
-
+// div.addEventListener(("mouseout"), () => {
+//     div.style.backgroundColor = "blue";
+//     div.style.width = "100px";
+// })
 
 
 
+
+// const student = {
+//     fullName : "Priyanka Patel", //properties/state
+//     marks : 99,
+//     printMarks : function() { // method/behaviour
+//         console.log("marks =", this.marks);    // this.marks = students.marks
+//     },
+
+// }
+
+//PROTOTYPE OBJECT
+
+// const employee = {
+//     calcTax() {
+//         console.log("Tax rate is 10%");
+//     },
+    //both are same
+    // calcTax2 : function() {
+    //     console.log("tax rate is 10%")
+    // }
+// };
+
+// const arjun = {
+//     salary : 50000,
+//     calcTax() {
+//         console.log("tax rate is 20%");
+//     },
+// };
+// const arjun2 = {
+//     salary : 50000,
+// };
+// const arjun3 = {
+//     salary : 50000,
+// };
+// const arjun4 = {
+//     salary : 50000,
+// };
+
+// arjun.__proto__ = employee;
+// arjun2.__proto__ = employee;
+// arjun3.__proto__ = employee;
+// arjun4.__proto__ = employee;
+
+//  _________
+// |
+// |
+// |
+// |_________
+//CLASSES AND OBJECTS
+// ----------------------------------------
+
+// class ToyotaCar{
+//     constructor(brand, mileage) {
+//         console.log("creating new object");
+//         this.brand = brand;
+//         this.mileage = mileage;
+//     }
+
+//     start() {
+//         console.log("start")
+//     }
+//     stop() {
+//         console.log("stop")
+//     }
+
+    // setBrand(brand){
+    //     this.brandName = brand;        //this.brand = brand;    here this.brand is "obj property" and brand is argument
+    // }
+
+// }
+
+// let fortuner = new ToyotaCar("fortuner", 10);     //constructor
+// console.log(fortuner);
+// fortuner.setBrand("fortuner");
+
+// let rollsRoyce = new ToyotaCar("rollsRoyce", 20);
+// console.log(rollsRoyce);
+// rollsRoyce.setBrand("rollsRoyce");
+
+
+
+//CONSTRUCTOR  --> initialise object
+//if no constructor present then automatically make one by default
+
+
+//Inheritance
+// class Parent {
+//     hello() {
+//         console.log("hello");
+//     }
+// }
+
+// class Child extends Parent {}
+
+// let obj = new Child();
+
+
+//--------------------------
+// class Person {
+//     constructor() {
+//         this.species = "homo sapiens";
+//     }
+
+//     eat() {
+//         console.log("eat");
+//     }
+//     sleep() {
+//         console.log("sleep");
+//     }
+
+//     work() {
+//         console.log("Do nothink");
+//     }
+// }
+
+// class Engineer extends Person{
+//     work() {
+//         console.log("Solve problems and build something new and amazing");
+//     }
+// }
+
+// class Doctor extends Person{
+//     work() {
+//         console.log("Treat Patients");
+//     }
+// }
+
+// let priyankaObj = new Engineer();
+
+//if parent and child have same method, child's method will be used --> method overriding
+
+
+
+// SUPER keyword
+// /////////////////////////////////////
+// class Person {
+//     constructor() {
+//         console.log("enter parent constructor");
+
+//         this.species = "homo sapiens";
+//     }
+
+//     eat() {
+//         console.log("eat");
+//     }
+
+// }
+
+// class Engineer extends Person{
+//     constructor(branch) {
+//         console.log("enter child constructor");
+//         super();  ///to invoke parent class constructor
+//         this.branch = branch;
+//         console.log("exit child constructor");
+
+//     }
+
+//     work() {
+//         console.log("Solve problems and build something new and amazing");
+//     }
+// }
+
+
+// let enggObj = new Engineer("chemical engg");
+
+
+// class Person {
+//     constructor(name) {
+//         this.species = "homo sapiens";
+//         this.name = name;
+//     }
+
+//     eat() {
+//         console.log("eat");
+//     }
+
+// }
+
+// class Engineer extends Person{
+//     constructor(name) {
+//         // super();
+//         super(name);  ///to invoke parent class constructor
+//     }
+
+//     work() {
+//         super.eat();
+//         console.log("Solve problems and build something new and amazing");
+//     }
+// }
+
+
+// let enggObj = new Engineer("priyanka");
+
+
+
+
+// let DATA = "secret information";
+
+// class User {
+//     constructor(name, email) {
+//         this.name = name;
+//         this.email = email;
+//     }
+
+//     viewData() {
+//         console.log("data = ", DATA);
+//     }
+// }
+
+// class Admin extends User{
+//     constructor(name, email) {
+//         super(name, email);
+//     }
+//     editData() {
+//         DATA = "new value";
+//     }
+
+// }
+// let student1 = new User("priyanka", "p@email.com");
+
+// let teacher1 = new User("Dean", "dean@gmail.com");
+
+
+// let admin1 = new Admin("admin", "admin@clg.com");
+
+
+
+//ERROR HANDLING
+// ----------------------------------------
+// try-catch(error)
+
+let a = 5;
+let b = 10;
+
+console.log(a);
+console.log(b);
+console.log(a+b);
+
+try {
+    console.log(a+c);
+}
+catch(error){
+    console.log(error);
+}
+
+console.log(a-b);
+console.log(a*b);
+console.log(a/b);
+console.log(a%b);
+console.log(b/a);
+console.log(b-a);
 
 
 
